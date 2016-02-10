@@ -23,14 +23,15 @@
 		<!-- This is, well, the bottom bit -->
 		<div class="bottombit">
 			<p class="explanation">Intrepid spy, your next dead drop location is 37.4258709,-122.1712977.</p>
-			<div id="button" button onclick="getLocation()">Refresh GPS: <div id="timer"></div></div>
-
+			<div id="button" onclick = "getLocation()">Refresh GPS: <div id="timer"></div></div>
+			
 			<div class="area">
 				<div class="box box1"><div id="latitude"><div id="demo1"></div></div></div>
 				<div class="box box2"><div id="longitude"><div id="demo"></div></div></div>
 			</div>
-
-
+			
+			
+			<div id="mapholder"></div>
 
 		<script>
 		
@@ -49,7 +50,13 @@ function getLocation() {
 function showPosition(position) {
 	
     x.innerHTML = "Latitude: " + Math.round( position.coords.longitude*100000 ) / 100000
-    y.innerHTML =" Longitude: " + Math.round( position.coords.latitude*100000 ) / 100000	
+    y.innerHTML =" Longitude: " + Math.round( position.coords.latitude*100000 ) / 100000
+
+	var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+    var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
+    +latlon+"&zoom=14&size=400x300&sensor=false";
+    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
 }
 
 function showError(error) {
@@ -70,6 +77,6 @@ function showError(error) {
 }
 
 </script>
-	<button onclick="getLocation()">Try it</button>
+	
 	</body>
 </html>
