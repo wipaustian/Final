@@ -23,11 +23,11 @@
 		<!-- This is, well, the bottom bit -->
 		<div class="bottombit">
 			<p class="explanation">Intrepid spy, your next dead drop location is 37.4258709,-122.1712977.</p>
-			<div id="button">Refresh GPS: <div id="timer"></div></div>
+			<div id="button" button onclick="getLocation()">Refresh GPS: <div id="timer"></div></div>
 
 			<div class="area">
-				<div class="box box1"><div id="latitude"><p id="demo1"></p></div></div>
-				<div class="box box2"><div id="longitude"><p id="demo"></p></div></div>
+				<div class="box box1"><div id="latitude"><div id="demo1"></div></div></div>
+				<div class="box box2"><div id="longitude"><div id="demo"></div></div></div>
 			</div>
 
 
@@ -47,8 +47,9 @@ function getLocation() {
 }
 
 function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude;
-    y.innerHTML =" Longitude: " + position.coords.longitude;		
+	
+    x.innerHTML = "Latitude: " + Math.round( position.coords.longitude*100000 ) / 100000
+    y.innerHTML =" Longitude: " + Math.round( position.coords.latitude*100000 ) / 100000	
 }
 
 function showError(error) {
