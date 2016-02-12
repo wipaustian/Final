@@ -23,7 +23,7 @@
 		<!-- This is, well, the bottom bit -->
 		<div class="bottombit">
 			<p class="explanation">Intrepid spy, your next dead drop location is 37.4258709,-122.1712977.</p>
-			<div id="button" onclick = "getLocation()">Refresh GPS: <div id="timer"></div></div>
+			<div id="button">Refresh GPS: <div id="timer"></div></div>
 			
 			<div class="area">
 				<div class="box box1"><div id="latitude"><div id="demo1"></div></div></div>
@@ -32,7 +32,7 @@
 			
 			
 			<div id="mapholder"></div>
-
+			<button onclick="getLocation()">Try it</button>
 		<script>
 		
 		var x = document.getElementById("demo");
