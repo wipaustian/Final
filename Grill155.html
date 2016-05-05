@@ -218,24 +218,24 @@
   
   
 <a href = "#"><img src = "add.png" id = "add" style = "width:50px;height:50px;top:600px;left:230px;position: absolute;font-size: 18px; padding:0px; visibility: hidden" onclick ="changeButton();"></button></a>
-<div id  = "add1" style = "width:100px;height:50px;top:650px;left:210px;position: absolute;font-size: 18px; padding:0px; visibility: hidden"><b><u>Add to Cart</u></b></div>
+<div id  = "add1" style = "width:100px;height:50px;top:650px;left:210px;position: absolute;font-size: 18px; padding:0px; visibility: hidden">Add to Cart</div>
 </section>
-<div id = "customize" style = "left:230px;top: 1050px;position: absolute;font-size: 18px; color: grey; padding:0px; visibility: hidden" onclick = "calc();">
+<div id = "customize" style = "left:330px;top: 1050px;position: absolute;font-size: 18px; color: grey; padding:0px; visibility: hidden" >
  <input type="checkbox" name="vehicle" id="Burger Sauce"> Burger Sauce
  <input type="checkbox" name="vehicle" id="Tomato" > Tomato
  <input type="checkbox" name="vehicle" id="Lettuce" > Lettuce
- <input type="checkbox" name="vehicle" id="Onions" > Onions
+ <input type="checkbox" name="vehicle" id="Onions" > Onions<br>
  <input type="checkbox" name="vehicle" id="Bacon" > Bacon + $1.49
 </div>
 
-<div id = "customize1" style = "left:330px;top: 1050px;position: absolute;font-size: 18px; color: grey; padding:0px; visibility: hidden" onclick = "calc();">
+<div id = "customize1" style = "left:330px;top: 1050px;position: absolute;font-size: 18px; color: grey; padding:0px; visibility: hidden" >
  <input type="checkbox" name="vehicle" id="Burger Sauce"> Hot Sauce 
  <input type="checkbox" name="vehicle" id="Burger Sauce"> Blue Cheese 
  <input type="checkbox" name="vehicle" id="Burger Sauce"> Other Sauce 
 
 </div>
 
-<div id = "customize2" style = "left:230px;top: 1050px;position: absolute;font-size: 18px; padding:0px; visibility: hidden" onclick = "calc();">
+<div id = "customize2" style = "left:330px;top: 1050px;position: absolute;font-size: 18px; padding:0px; visibility: hidden">
  <input type="checkbox" name="vehicle" id="Small"> Small 
  <input type="checkbox" name="vehicle" id="Medium"> Medium
  <input type="checkbox" name="vehicle" id="Large"> Large
@@ -304,6 +304,8 @@
 			customize.style.visibility  = 'hidden';
 			customize1.style.visibility  = 'hidden';
 			customize2.style.visibility  = 'hidden';
+			add.src = "add.png";
+			add1.innerHTML = "Add to cart";
 		}	
 	
 		function nextPage(){
@@ -340,6 +342,8 @@
 			b.style.visibility = 'hidden';
 			f.style.visibility = 'hidden';
 			sides.style.visibility = 'visible';
+			add.src = "add.png";
+			add1.innerHTML = "Add to cart";
 
 		}
 		
@@ -366,14 +370,18 @@
 		}
 		
 		function changeButton(){
-			if(!document.getElementById('Small').checked && !document.getElementById('Medium').checked && !document.getElementById('Large').checked)
+			if(!document.getElementById('Small').checked && !document.getElementById('Medium').checked && !document.getElementById('Large').checked  && customize2.style.visibility == 'visible')
 				alert("Choose a size");
 			
 			else{
-			if(add.src.match("add.png"))
+			if(add.src.match("add.png")){
 				add.src = "download.png";
-			else
+				add1.innerHTML = "Added to cart";
+				}
+			else{
 				add.src = "add.png";
+				add1.innerHTML = "Add to cart";
+			}
 			}
 		}
 		

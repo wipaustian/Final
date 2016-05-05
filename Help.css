@@ -4,6 +4,7 @@ body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table,tr,td, img, d
 table{ border-collapse:collapse;}
 ul, ol { list-style-type:none; }
 /*content */
+
 .content {
 		width:975px;
 		height: 975px;
@@ -159,6 +160,8 @@ ul, ol { list-style-type:none; }
 		height:70px;
 		margin:45px auto;	
 		background:#7F7979;
+		
+		
 }
 .bottom ul li{
 	margin-top:10px;
