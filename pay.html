@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link href="pay.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<div class = "content">
+<div class = "Banner">
+	<div class ="Help"><a href ="faq.html"><img src="2.png"></a>
+    <span id = "help" style = "color:white;"><u>Help</u></span>
+    </div>
+    <div class = "Logo"><img id = "logo" src="ieat.png"></div>
+    </div>
+    
+<div class = "middle">
+<div class = "ordernumber">
+	<span id = "ordernumber">Order Number: 100
+    </span>
+    </div>
+    <div class="back"><a href ="#"><img src="Back-48.png" width="30" height="48"></a></div>
+    <div class = "lists">
+    <ul>
+    <li><span>1. Meal Credits ...... 21</span><a href="#"><img id= "delete" src="Coins-48.png"></a></li>
+    <li><span>2. Dinning Dollars $50.00</span><a href="#"><img id= "delete" src="Expensive 2-48.png"></a></li>
+    <li><span>3. Bear Bucks....$ 10.00</span><a href="#"><img id= "delete" src="Wallet-48.png"></a></li>
+    </ul>
+    </div>
+    <div class = "add"><a href="#"><img src="Plus-48.png" width="40" height="40" ></a></div>
+<div class="total"><img id ="cancel" src="Cancel-48.png"><a href="#"><img src="Bank Cards-48.png"><span id= "pay">Pay</span></div></a>
+</div>
+
+<div class = "bottom">
+<ul>
+	<li><a href ="profile.html"><img src="account.png" width ="40" height="40"><span style = "left:467px;top:800px;position:absolute;color:white;"><u><b>Account</b></u></span></a></li>
+    <li><a href ="lists.html"><img src="list.png"width ="40" height="40"><span style = "left:562px;top:800px;position:absolute;color:white;"><b><u>List</u></b></span></a></li>
+    <li><a href ="HomePage1.html"><img src="home.png"width ="40" height="40"><span style = "left:642px;top:800px;position:absolute;color:white;"><b><u>Home</u></b></span></a></li>
+    <li><a href ="cart.html"><img src="cart.png"width ="40" height="40"><span style = "left:728px;top:800px;position:absolute;color:white;"><b><u>Cart</u></b></span></a></li>
+</ul>
+	
+</div>
+
+
+<script>
+	var image = document.getElementById('myImage');
+	var sound = document.getElementById('audio');
+	var temp = document.getElementsByClassName("loginform");
+	var temp1 = document.getElementsByClassName("signup");	
+	
+
+		function changeImage() {
+			image.src = "http://i65.tinypic.com/2s198y8.png";
+			sound.play();
+			setTimeout(stopSound, 1000);
+		}
+		
+		function stopSound() {
+			sound.src = "";
+		}
+		
+		function function1(){
+			temp.style.visibility = 'hidden';
+			temp1.style.visibility = 'visible';
+		}		
+</script>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+
+</div>
+</body>
+</html>

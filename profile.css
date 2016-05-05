@@ -1,0 +1,178 @@
+@charset "UTF-8";
+/* CSS Document */
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table,tr,td, img, div { margin:0; padding:0; border:0; }
+table{ border-collapse:collapse;}
+ul, ol { list-style-type:none; }
+/*content */
+.content {
+		position: relative;
+		width:930px;
+		background: #F0F0F0;
+		border: 1px solid #FFFFFF;
+		height: 1560px;
+		margin: 0 auto;
+		border-radius:10px;
+		background-color: #FFFFFF;
+	}
+.Banner {
+		width:730px;
+		height:250px;
+		
+}
+.Help{
+	float:left;
+	width:200px;
+	height:250px;
+}
+#Help{
+	width:200px;
+	height:200px;
+	border-right: 1px solid #8F8889;
+	border-bottom: 1px solid #8F8889;
+}
+.Logo{
+	float:right;
+	width:210px;
+	height:250px;
+}
+#myImage{
+	width:510px;
+	height:250px;
+}
+.Logout{
+	float:left;
+	width:200px;
+	height:200px;
+	
+}
+#Logout{
+	width:200px;
+	height:180px;
+	padding:10px 0 10px 10px;
+	border-bottom: 1px solid #8F8889;
+	border-left: 1px solid #8F8889;
+}
+.middle {
+		margin:0 auto;
+		width:600px;
+		height:1120px;
+		background:#FFFFFF;
+		margin-top:100px;
+		border-radius:20px;
+}
+
+.middle ul{
+	overflow:hidden;
+	width:600px;
+	margin:0 auto;
+	margin-top:100px;
+}
+.middle ul li{
+		width:600px;
+		height:100px;
+		background-color:#97DEE7;
+		margin-top:10px;
+		
+}
+#delete{
+	
+	width:50px;
+	height:50px;
+	margin-left:100px;
+}
+#edit{
+	width:50px;
+	height:50px;
+	
+}
+#edit:hover {
+	-webkit-animation-name: hvr-pulse;
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.middle ul li a{
+	font-size:50px;
+	font-family:Impact, Charcoal, sans-serif;
+	text-align:left;
+	
+	}
+.middle ul li a:hover{
+	background:#666;
+}
+.bottom {
+		position: absolute;
+		width:1030px;
+		height:100px;
+		margin-top:50px;		
+}
+.bottom ul{
+	overflow:hidden;
+}
+.button {
+  border-radius: 4px;
+  background-color: #808080;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 35px;
+  padding: 20px;
+  width: 168px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 7px;
+  -moz-border-radius: 70px;
+  -webkit-border-radius: 70px
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* lists */
+.foodname{
+	font-size:40px;
+}
+.fooddetail{
+	font-size:40px;
+}
+
+.totaldetail{
+	font-size:40px;
+	margin-top:100px;
+	
+}
+#back{
+	margin-top:20px;
+}
+
+
+	
+
+

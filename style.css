@@ -1,0 +1,172 @@
+@charset "UTF-8";
+/* CSS Document */
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table,tr,td, img, div { margin:0; padding:0; border:0; }
+table{ border-collapse:collapse;}
+ul, ol { list-style-type:none; }
+/*content */
+.content {
+		width:975px;
+		height: 975px;
+		margin:0 auto;
+		padding-top:160px;
+		background-image:url(body.png);
+		background-repeat:no-repeat;
+		padding-bottom:800px;
+		
+	}
+.Banner {
+		width:370px;
+		height:80px;
+		margin:0 auto;
+		background-color:#808080;
+		border-bottom: 2px solid #D3D3D3;
+		
+}
+.Help{
+	float:left;
+	width:70px;
+	height:80px;
+	margin-left:10px;
+}
+#help{
+	text-align:center;
+	color:#D3D3D3;
+	font:15px arial, sans-serif;
+	margin-left:10px;
+}
+.Logo{
+	float:left;
+	width:200px;
+	height:80px;
+}
+#logo{
+	width:200px;
+	height:80px;
+}
+.search{
+	float:left;
+	width:60px;
+	height:80px;
+	margin-left:10px;
+}
+#search{
+	text-align:center;
+	color:#D3D3D3;
+	font:15px arial, sans-serif;
+	margin-left:10px;
+}
+
+.middle {
+		margin:10px auto;
+		width:370px;
+		height:450px;
+		
+		
+}
+.ordernumber{
+	width:370px;
+	height:80px;
+	margin-top:10px;
+}
+#ordernumber {
+	position:absolute;
+	width:350px;
+	height:40px;
+	margin:20px 0 0 10px;
+	font:24px arial, sans-serif;
+	color:#9F9A9A;
+	border-bottom:1px solid #9F9A9A;
+	
+}
+.back{
+	margin-top:140px;
+	width:10px;
+	float:left;
+}
+.lists{
+	width:370px;
+	height:150px;
+	
+}
+.lists ul li{
+	height:50px;
+	font:22px arial, sans-serif;
+	color:#9F9A9A;
+	width:330px;
+	float:right;
+	
+}
+.lists ul li span{
+	position:absolute;
+	margin-top:5px;
+	
+}
+.add{
+	width:340px;
+	margin:10px auto;
+	border-bottom:1px solid #9F9A9A;
+}
+.add img{
+    margin-left:150px;
+	margin-bottom:10px;
+}
+.total{
+	width:310px;
+	height:150px;
+	margin:10px auto;
+}
+#total{
+	width:310px;
+	text-align:right;
+	margin-top:10px;
+	float:right;
+	font:24px arial, sans-serif;
+	color:#9F9A9A;
+}
+.total img{
+	float:right;
+	width:80px;
+	height:80px;
+	margin-top:10px;
+	margin-right:5px;
+}
+#delete{
+	width:36px;
+	height:36px;
+	float:right;
+	margin-right:10px;
+	
+	
+}
+#pay{
+	
+	position:absolute;
+	margin-top:130px;
+	margin-left:240px;
+	font:24px arial, sans-serif;
+	color:#9F9A9A;
+}
+
+
+.bottom {
+		width:370px;
+		height:70px;
+		margin:45px auto;	
+		background:#7F7979;
+}
+.bottom ul li{
+	margin-top:10px;
+	float:left;
+	width:44px;
+	height:70px;
+	margin-left:40px;
+}
+
+.bottom ul li a{
+	text-decoration:none;
+}
+
+.bottom ul li span{
+	font:18px arial, sans-serif;
+	color:#808080;
+}

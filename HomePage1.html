@@ -1,0 +1,91 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home Screen</title>
+<link href="Home.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div class = "content">
+<div class = "Banner">
+
+    <div class = "Logo">
+    <img id="myImage" src = "Capture.png" style = "width:180px;height: 100px; position:absolute;top:350px;left:360px;">
+    </div>
+	<audio id="audio" src="Cartoon_Bite_Sound_Effect.ogg" ></audio>
+    
+</div>
+
+
+<div class = "middle">
+<img id="myImage" src = "body1.png" style = "width:1555px;height: 1675px; position:absolute;top:80px;left:-310px;">
+<div style="width:600px;height:100px;border:0px solid #000; background-color: #808080;"></div>
+<a href = "faq.html"><button class="button" style = "width:100px;height:50px;top:370px;left:195px;position: absolute;background-color: #808080;font-size: 22px;padding:0px;" src="Grill.png" ><img src="help.png" height="55" style></button></a>
+<h1 style = "font-size: 18px;color:white;position:absolute; top:430px;left:235px;font-style: arial;"><u>Help</u></h1>
+
+<a href = "Grill155.html"><button class="button" style ="width:170px;height:100px;top:150px;left:80px;position: relative;background-color: #808080;font-size: 22px;" src="Grill.png"><img src="Grill.png" height="65"></button></a>
+<h1 style = "font-style: arial; font-size: 24px;color:#808080 ;position:absolute; top:730px;left:290px;"><u>Grill 155</u></h1>
+<a href = "Jazzmans.html"><button class="button" style = "width:170px;height:100px;top:360px;left:190px;position: relative;background-color: #808080;font-size: 22px;" src="Grill.png"><img src="Jazzmans.png" height="65"></button></a>
+<h1 style = "font-style: arial; font-size: 24px;color:#808080 ;position:absolute; top:730px;left:585px;"><u>Sandellas</u></h1>
+<h1 style = "font-style: arial; font-size: 24px;color:#808080 ;position:absolute; top:930px;left:585px;"><u>Jazzmans</u></h1>
+<a href = "Sandellas.html"><button class="button" style = "width:170px;height:100px;top:150px;left:0px;position: relative;background-color: #808080;font-size: 22px;" src="Grill.png"><img src="Sandellas.png" height="65"></button></a>
+<h1 style = "font-style: arial; font-size: 24px;color:#808080 ;position:absolute; top:930px;left:255px;"><u>Sub Connection</u></h1>
+<a href = "SubConnection1.html"><button class="button" style = "width:170px;height:100px;top:240px;left:80px;position: relative;background-color: #808080;font-size: 22px;" src="Grill.png"><img src="Sub.png" height="65"></button></a>
+
+
+<div style="position:relative;top:700px;left:10px;width:587px;height:100px;border:0px solid #000; background-color: #808080;"></div>
+<a href = "profile.html"><button class="button" style = "width:100px;height:50px;top:1380px;left:185px;position: absolute;background-color: #808080;font-size: 22px;padding:0px;" src="Grill.png" ><img src="account.png" height="55" style></button></a>
+<h1 style = "font-size: 18px;color:#FFFFFF;position:absolute; top:1450px;left:205px;font-style: arial;"><u>Account</u></h1>
+<a href = "lists.html"><button class="button" style = "width:100px;height:50px;top:1380px;left:330px;position: absolute;background-color: #808080;font-size: 22px;padding:0px;" src="Grill.png" ><img src="list.png" height="55" style></button></a>
+<h1 style = "font-size: 18px;color:#FFFFFF;position:absolute; top:1450px;left:370px;font-style: arial;"><u>List</u></h1>
+
+<a href = "HomePage1.html"><button class="button" style = "width:100px;height:50px;top:1380px;left:485px;position: absolute;background-color: #808080;font-size: 22px;padding:0px;" src="Grill.png" ><img src="home.png" height="55" style></button></a>
+<h1 style = "font-size: 18px;color:#FFFFFF;position:absolute; top:1450px;left:518px;font-style: arial;"><u>Home</u></h1>
+<a href = "cart.html"><button class="button" style = "width:100px;height:50px;top:1380px;left:655px;position: absolute;background-color: #808080;font-size: 22px;padding:0px;" src="Grill.png" ><img src="cart.png" height="55" style></button></a>
+<h1 style = "font-size: 18px;color:#FFFFFF;position:absolute; top:1450px;left:695px;font-style: arial;"><u>Cart</u></h1>
+
+
+</div>
+
+
+<script>
+	var image = document.getElementById('myImage');
+	var sound = document.getElementById('audio');
+	var temp = document.getElementsByClassName("loginform");
+	var temp1 = document.getElementsByClassName("signup");	
+	
+
+		function changeImage() {
+			image.src = "a1.png";
+			sound.play();
+			setTimeout(stopSound, 1000);
+			setTimeout(replace, 2000);
+			
+		}
+		
+		function stopSound() {
+			sound.src = "";
+		}
+		
+		function replace() {
+			image.src = "a.png";
+			sound.src = "Cartoon_Bite_Sound_Effect.ogg";
+		}
+		
+		function function1(){
+			temp.style.visibility = 'hidden';
+			temp1.style.visibility = 'visible';
+		}		
+</script>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+
+</div>
+</body>
+</html>

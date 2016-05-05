@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lists</title>
+<link href="lists.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<div class = "content">
+<div class = "Banner" style = "background-color: #808080;">
+	<div class ="Help"><a href ="faq.html"><img src="2.png"></a>
+    <span id = "help" style = "color:white;"><u>Help</u></span>
+    </div>
+    <div class = "Logo"><img id = "logo" src="Capture.png"></div>
+    </div>
+    
+<div class = "middle">
+<div class = "ordernumber">
+	<span id = "ordernumber">My Lists
+    </span>
+    </div>
+    
+    <div class = "lists">
+    <ul>
+    <li><span>1. My favorite</span><a href="#"><img id= "delete" id = "1" src="Cancel-48.png" ></a><a href = "#"><img id ="edit" src="Edit-48.png"></a></li>
+    <li><span>2. Fitness Meal</span><a href="#"><img id= "delete"  id = "2" src="Cancel-48.png"></a><a href = "#"><img id ="edit" src="Edit-48.png"></a></li>
+    
+    </ul>
+    </div>
+    <div class = "add"><a href="#"><img src="Plus-48.png" width="40" height="40" ></a></div>
+<div class="total"><span id="total"></span><a href = "#"><span id= "pay"></span></div></a>
+</div>
+
+<div class = "bottom">
+<ul>
+	<li><a href ="profile.html"><img src="account.png" width ="40" height="40"><span style = "left:460px;top:800px;position:absolute;"><u>Account</u></span></a></li>
+    <li><a href ="lists.html"><img src="list.png"width ="40" height="40"><span style = "left:560px;top:800px;position:absolute;"><u>List</u></span></a></li>
+    <li><a href ="HomePage1.html"><img src="home.png"width ="40" height="40"><span style = "left:637px;top:800px;position:absolute;"><u>Home</u></span></a></li>
+    <li><a href ="cart.html"><img src="cart.png"width ="40" height="40"><span style = "left:728px;top:800px;position:absolute;"><u>Cart</u></span></a></li>
+</ul>
+	
+</div>
+
+
+<script>
+	var image = document.getElementById('myImage');
+	var sound = document.getElementById('audio');
+	var temp = document.getElementsByClassName("loginform");
+	var temp1 = document.getElementsByClassName("signup");	
+	
+		function changeImage() {
+			image.src = "http://i65.tinypic.com/2s198y8.png";
+			sound.play();
+			setTimeout(stopSound, 1000);
+		}
+		
+		function stopSound() {
+			sound.src = "";
+		}
+		
+		function function1(){
+			temp.style.visibility = 'hidden';
+			temp1.style.visibility = 'visible';
+		}		
+</script>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+
+</div>
+</body>
+</html>

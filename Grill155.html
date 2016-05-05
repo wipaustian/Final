@@ -1,0 +1,401 @@
+<!Doctype html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Grill 155</title>
+<link href="Grill155.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div class = "content">
+<div class = "Banner">
+    <div class = "Logo">
+    <img id="myImage" src = "Capture.png" style = "width:180px;height: 100px; position:absolute;top:350px;left:360px;">
+    </div>
+	<audio id="audio" src="Cartoon_Bite_Sound_Effect.ogg" ></audio>
+    
+</div>
+
+<div class = "middle" id = "M">
+
+<img id="myImage" src = "body1.png" style = "width:1555px;height: 1675px; position:absolute;top:80px;left:-310px;">
+
+<div style="width:600px;height:100px;border:0px solid #000; background-color: #808080;"></div>
+
+<a href = "#"><button class="button" id = "1" style = "width:120px;height:80px;top:445px;left:167px;position: absolute;;font-size: 18px; color: #C0C0C0; padding:0px; background-color: #FFFFFF;" onclick = "toFood();document.getElementById('1').style.backgroundColor  = '#FFFFFF';document.getElementById('2').style.backgroundColor  = '#808080';document.getElementById('1').style.color  = '#C0C0C0';document.getElementById('2').style.color  = '#FFFFFF'"><img src = "food.png"> <br> Food </button></a>
+<a href = "#"><button class="button" id = "2" style = "width:120px;height:80px;top:445px;left:295px;position: absolute;;font-size: 18px; padding:0px;" onclick = "changeToSides();document.getElementById('2').style.backgroundColor  = '#FFFFFF';document.getElementById('1').style.backgroundColor  = '#808080';document.getElementById('2').style.color  = '#C0C0C0';document.getElementById('1').style.color  = '#FFFFFF'"><img src = "drink.png"> <br> Sides</button></a>
+
+<div id = "food1">
+<a href = "#"><button class="button"  id = "chicken" style = "width:150px;height:110px;top:595px;left:257px;position: absolute;;font-size: 18px; padding:0px;" onclick = "getNutrition(this.id, '3-Piece Chicken');"> <b>3-Piece Chicken</b> </button></a>
+<a href = "#"><button class="button"  id = "Sandwich" style = "width:150px;height:110px;top:795px;left:507px;position: absolute;;font-size: 18px; padding:0px;" onclick = "getNutrition(this.id, 'Cheeseburger');"> <b>Cheeseburger</b> </button></a>
+<a href = "#"><button class="button"  id = "Sandwich" style = "width:150px;height:110px;top:995px;left:257px;position: absolute;;font-size: 18px; padding:0px;" onclick = "getNutrition(this.id, 'Cheesesteak Sandwich');"> <b>Cheesesteak Sandwich</b> </button></a>
+<a href = "#"><button class="button"  id = "chicken" style = "width:150px;height:110px;top:595px;left:507px;position: absolute;;font-size: 18px; padding:0px;" onclick = "getNutrition(this.id, '5-Piece Chicken');"> <b>5-Piece Chicken</b> </button></a>
+<a href = "#"><button class="button"  id = "Sandwich" style = "width:150px;height:110px;top:795px;left:257px;position: absolute;;font-size: 18px; padding:0px;" onclick = "getNutrition(this.id, 'Buffalo Chicken Cheesesteak' );"> <b>Buffalo Chicken Cheesesteak</b> </button></a>
+<a href = "#"><button class="button"  id = "Sandwich" style = "width:150px;height:110px;top:995px;left:507px;position: absolute;;font-size: 18px; padding:0px;" onclick = "getNutrition(this.id, 'Chicken Cheesesteak');"> <b>Chicken Cheesesteak</b> </button></a>
+</div>
+
+<div id = "food2" style = "visibility: hidden;">
+<a href = "#"><button class="button"  id = "Sandwich" style = "width:150px;height:110px;top:595px;left:257px;position: absolute;;font-size: 18px; padding:0px;" onclick = "getNutrition(this.id, 'Grilled Cheese Sandwich' );"> <b>Grilled Cheese Sandwich</b> </button></a>
+<a href = "#"><button class="button"  id = "Sandwich" style = "width:150px;height:110px;top:795px;left:507px;position: absolute;;font-size: 18px; padding:0px;" onclick = "getNutrition(this.id, 'Ultimate Double Cheeseburger' );"> <b>Ultimate Double Cheeseburger</b> </button></a>
+<a href = "#"><button class="button"  id = "Sandwich" style = "width:150px;height:110px;top:995px;left:257px;position: absolute;;font-size: 18px; padding:0px;" onclick = "getNutrition(this.id, 'Vegan Cutlet Sandwich' );"> <b>Vegan Cutlet Sandwich</b> </button></a>
+<a href = "#"><button class="button"  id = "Sandwich" style = "width:150px;height:110px;top:595px;left:507px;position: absolute;;font-size: 18px; padding:0px;" onclick = "getNutrition(this.id, 'Mozzarella' );"> <b>Mozzarella</b> </button></a>
+<a href = "#"><button class="button"  id = "Sandwich" style = "width:150px;height:110px;top:795px;left:257px;position: absolute;;font-size: 18px; padding:0px;" onclick = "getNutrition(this.id, 'Sourdough Double Bacon Cheeseburger' );"> <b>Sourdough Double Bacon Cheeseburger</b> </button></a>
+<a href = "#"><button class="button"  id = "Sandwich" style = "width:150px;height:110px;top:995px;left:507px;position: absolute;;font-size: 18px; padding:0px;" onclick = "getNutrition(this.id, 'Ultimate Double Hamburger');"> <b>Ultimate Double Hamburger</b> </button></a>
+</div>
+
+<div id = "sides" style = "visibility: hidden;">
+<a href = "#"><button class="button"  id = "Drink" style = "width:150px;height:110px;top:595px;left:257px;position: absolute;;font-size: 18px; padding:0px;" onclick = "getNutrition(this.id, 'Fountain Drink');"> <b>Fountain Drink</b> </button></a>
+
+<a href = "#"><button class="button"  id = "Fries" style = "width:150px;height:110px;top:595px;left:507px;position: absolute;;font-size: 18px; padding:0px;" onclick = "getNutrition(this.id, 'French Fries');"> <b>French Fries</b> </button></a>
+
+</div>
+
+
+<a href = "faq.html"><button class="button" style = "width:100px;height:50px;top:370px;left:195px;position: absolute;background-color: #808080;font-size: 22px;padding:0px;" src="Grill.png" ><img src="help.png" height="55" style></button></a>
+<h1 style = "font-size: 16px;color:white;position:absolute; top:430px;left:235px;font-style: arial;"><u>Help</u></h1>
+
+<a href = "#"><div ><img id = "fButton" src = "b.png" style="width:50px;height:100px;position:absolute;left:160px;top:800px;" onclick = "backPage();"></div></a>
+<a href = "#"><div ><img id = "bButton" src = "f.png" style="width:50px;height:100px;position:absolute;left:720px;top:800px;-webkit-transform: rotate(180deg); transform: rotate(180deg);" onclick = "nextPage();"></div></a>
+
+<div style="position:relative;top:930px;left:10px;width:587px;height:100px;border:0px solid #000; background-color: #808080;"></div>
+<a href = "profile.html"><button class="button" style = "width:100px;height:50px;top:1380px;left:185px;position: absolute;background-color: #808080;font-size: 22px;padding:0px;" src="Grill.png" ><img src="account.png" height="55" style></button></a>
+<h1 style = "font-size: 18px;color:#FFFFFF;position:absolute; top:1450px;left:205px;font-style: arial;"><u>Account</u></h1>
+<a href = "lists.html"><button class="button" style = "width:100px;height:50px;top:1380px;left:330px;position: absolute;background-color: #808080;font-size: 22px;padding:0px;" src="Grill.png" ><img src="list.png" height="55" style></button></a>
+<h1 style = "font-size: 18px;color:#FFFFFF;position:absolute; top:1450px;left:370px;font-style: arial;"><u>List</u></h1>
+
+<a href = "HomePage1.html"><button class="button" style = "width:100px;height:50px;top:1380px;left:485px;position: absolute;background-color: #808080;font-size: 22px;padding:0px;" src="Grill.png" ><img src="home.png" height="55" style></button></a>
+<h1 style = "font-size: 18px;color:#FFFFFF;position:absolute; top:1450px;left:518px;font-style: arial;"><u>Home</u></h1>
+<a href = "cart.html"><button class="button" style = "width:100px;height:50px;top:1380px;left:655px;position: absolute;background-color: #808080;font-size: 22px;padding:0px;" src="Grill.png" ><img src="cart.png" height="55" style></button></a>
+<h1 style = "font-size: 18px;color:#FFFFFF;position:absolute; top:1450px;left:695px;font-style: arial;"><u>Cart</u></h1>
+
+<div id = "price" style = "font-size:18px; visibility:hidden;position:absolute;left: 325px"></div>
+<section class="performance-facts" id = "Nutrition" style = "position: absolute; visibility: hidden;top: 570px; left: 305px;background-color:#f5f5f0;border-color: #eaeae1;color: #808080;">
+  <header class="performance-facts__header" >
+  
+    <h1 class="performance-facts__title"> Nutrition Facts</h1>
+    <p>Serving Size 1/2 cup (about 82g)
+    <p>Serving Per Container 8</p>
+  </header>
+  <table class="performance-facts__table">
+    <thead>
+      <tr>
+        <th colspan="3" class="small-info" >
+          Amount Per Serving
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th colspan="2">
+          <b>Calories</b>
+          200
+        </th>
+        <td>
+          Calories from Fat
+          130
+        </td>
+      </tr>
+      <tr class="thick-row">
+        <td colspan="3" class="small-info">
+          <b>% Daily Value*</b>
+        </td>
+      </tr>
+      <tr>
+        <th colspan="2">
+          <b>Total Fat</b>
+          14g
+        </th>
+        <td>
+          <b>22%</b>
+        </td>
+      </tr>
+      <tr>
+        <td class="blank-cell">
+        </td>
+        <th>
+          Saturated Fat
+          9g
+        </th>
+        <td>
+          <b>22%</b>
+        </td>
+      </tr>
+      <tr>
+        <td class="blank-cell">
+        </td>
+        <th>
+          Trans Fat
+          0g
+        </th>
+        <td>
+        </td>
+      </tr>
+      <tr>
+        <th colspan="2">
+          <b>Cholesterol</b>
+          55mg
+        </th>
+        <td>
+          <b>18%</b>
+        </td>
+      </tr>
+      <tr>
+        <th colspan="2">
+          <b>Sodium</b>
+          40mg
+        </th>
+        <td>
+          <b>2%</b>
+        </td>
+      </tr>
+      <tr>
+        <th colspan="2">
+          <b>Total Carbohydrate</b>
+          17g
+        </th>
+        <td>
+          <b>6%</b>
+        </td>
+      </tr>
+      <tr>
+        <td class="blank-cell">
+        </td>
+        <th>
+          Dietary Fiber
+          1g
+        </th>
+        <td>
+          <b>4%</b>
+        </td>
+      </tr>
+      <tr>
+        <td class="blank-cell">
+        </td>
+        <th>
+          Sugars
+          14g
+        </th>
+        <td>
+        </td>
+      </tr>
+      <tr class="thick-end">
+        <th colspan="2">
+          <b>Protein</b>
+          3g
+        </th>
+        <td>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <table class="performance-facts__table--grid">
+    <tbody>
+      <tr>
+        <td colspan="2">
+          Vitamin A
+          10%
+        </td>
+        <td>
+          Vitamin C
+          0%
+        </td>
+      </tr>
+      <tr class="thin-end">
+        <td colspan="2">
+          Calcium
+          10%
+        </td>
+        <td>
+          Iron
+          6%
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+<a href = "#"><img src = "add.png" id = "add" style = "width:50px;height:50px;top:600px;left:230px;position: absolute;font-size: 18px; padding:0px; visibility: hidden" onclick ="changeButton();"></button></a>
+<div id  = "add1" style = "width:100px;height:50px;top:650px;left:210px;position: absolute;font-size: 18px; padding:0px; visibility: hidden"><b><u>Add to Cart</u></b></div>
+</section>
+<div id = "customize" style = "left:230px;top: 1050px;position: absolute;font-size: 18px; color: grey; padding:0px; visibility: hidden" onclick = "calc();">
+ <input type="checkbox" name="vehicle" id="Burger Sauce"> Burger Sauce
+ <input type="checkbox" name="vehicle" id="Tomato" > Tomato
+ <input type="checkbox" name="vehicle" id="Lettuce" > Lettuce
+ <input type="checkbox" name="vehicle" id="Onions" > Onions
+ <input type="checkbox" name="vehicle" id="Bacon" > Bacon + $1.49
+</div>
+
+<div id = "customize1" style = "left:330px;top: 1050px;position: absolute;font-size: 18px; color: grey; padding:0px; visibility: hidden" onclick = "calc();">
+ <input type="checkbox" name="vehicle" id="Burger Sauce"> Hot Sauce 
+ <input type="checkbox" name="vehicle" id="Burger Sauce"> Blue Cheese 
+ <input type="checkbox" name="vehicle" id="Burger Sauce"> Other Sauce 
+
+</div>
+
+<div id = "customize2" style = "left:230px;top: 1050px;position: absolute;font-size: 18px; padding:0px; visibility: hidden" onclick = "calc();">
+ <input type="checkbox" name="vehicle" id="Small"> Small 
+ <input type="checkbox" name="vehicle" id="Medium"> Medium
+ <input type="checkbox" name="vehicle" id="Large"> Large
+
+</div>
+ </div>
+
+ 
+
+<script>
+
+	
+
+	var image = document.getElementById('myImage');
+	var sound = document.getElementById('audio');
+	var temp = document.getElementsByClassName("loginform");
+	var temp1 = document.getElementsByClassName("signup");
+	
+	
+	var alpha = document.getElementById("a");	
+	var alpha2 = document.getElementById("a2");	
+	var pop = document.getElementById("p");	
+	var pop2 = document.getElementById("p2");
+	var side = document.getElementById("sides");
+	var Nutrition = document.getElementById("Nutrition");
+	var M = document.getElementById("M");
+	var add = document.getElementById("add");
+	var add1 = document.getElementById("add1");
+	
+	var food1 = document.getElementById("food1");
+	var food2 = document.getElementById("food2");
+	var sides = document.getElementById("sides");
+	
+	var f = document.getElementById("fButton");
+	f.style.visibility = 'hidden'; 
+	var b = document.getElementById("bButton");
+	
+	var customize = document.getElementById("customize");
+	var customize1 = document.getElementById("customize1");
+	var customize2 = document.getElementById("customize2");
+	
+	var price = document.getElementById("price");
+	
+	
+		function changeImage() {
+			image.src = "a1.png";
+			sound.play();
+			setTimeout(stopSound, 1000);
+			setTimeout(replace, 2000);
+			
+		}
+		
+		function stopSound() {
+			sound.src = "";
+		}
+		
+		function toFood(){
+			sides.style.visibility = 'hidden';
+			food2.style.visibility = 'hidden';
+			food1.style.visibility = 'visible';
+			b.style.visibility = 'visible';
+			Nutrition.style.visibility = "hidden";
+			price.style.visibility = "hidden";
+			add.style.visibility  = 'hidden';
+			add1.style.visibility  = 'hidden';
+			customize.style.visibility  = 'hidden';
+			customize1.style.visibility  = 'hidden';
+			customize2.style.visibility  = 'hidden';
+		}	
+	
+		function nextPage(){
+			food1.style.visibility = 'hidden';
+			food2.style.visibility = 'visible';
+			f.style.visibility = 'visible'; 
+			b.style.visibility = 'hidden'; 
+		}
+		
+		function backPage(){
+			food1.style.visibility = 'visible';
+			food2.style.visibility = 'hidden';
+			b.style.visibility = 'visible';
+			f.style.visibility = 'hidden';
+			Nutrition.style.visibility = "hidden";
+			price.style.visibility = "hidden";
+			add.style.visibility  = 'hidden';
+			add1.style.visibility  = 'hidden';
+			customize.style.visibility  = 'hidden';
+			customize1.style.visibility  = 'hidden';
+			customize2.style.visibility  = 'hidden';
+		}
+		
+		function changeToSides(){
+			food1.style.visibility = 'hidden';
+			food2.style.visibility = 'hidden';
+			Nutrition.style.visibility = "hidden";
+			price.style.visibility = "hidden";
+			add.style.visibility  = 'hidden';
+			add1.style.visibility  = 'hidden';
+			customize.style.visibility  = 'hidden';
+			customize1.style.visibility  = 'hidden';
+			customize2.style.visibility  = 'hidden';
+			b.style.visibility = 'hidden';
+			f.style.visibility = 'hidden';
+			sides.style.visibility = 'visible';
+
+		}
+		
+		function getNutrition(clicked_class, name){
+			
+			food1.style.visibility = 'hidden';
+			food2.style.visibility = 'hidden';
+			sides.style.visibility = 'hidden';
+			b.style.visibility = 'hidden';
+			Nutrition.style.visibility = "visible";
+			price.style.visibility = "visible";
+			price.innerHTML = name+".........................$3.49";
+			add.style.visibility  = 'visible';
+			add1.style.visibility  = 'visible';
+			
+		
+			if(clicked_class=="chicken")
+				customize1.style.visibility  = 'visible';
+			else if(clicked_class == "Sandwich")
+				customize.style.visibility  = 'visible';
+			else if(clicked_class == "Drink" || clicked_class == "Fries")
+				customize2.style.visibility  = 'visible';
+				
+		}
+		
+		function changeButton(){
+			if(!document.getElementById('Small').checked && !document.getElementById('Medium').checked && !document.getElementById('Large').checked)
+				alert("Choose a size");
+			
+			else{
+			if(add.src.match("add.png"))
+				add.src = "download.png";
+			else
+				add.src = "add.png";
+			}
+		}
+		
+		function calc(){
+			var bprice = 1.49;
+			var original = "$3.49"
+			  if (document.getElementById('Bacon').checked) 
+			  {
+				  document.getElementById('price').innerHTML = document.getElementById('price').innerHTML.replace('$','');
+				  var temp = parseFloat(document.getElementById('price').innerHTML);
+				  document.getElementById('price').innerHTML = '$'+(temp+bprice);
+			  } 
+			  else {
+				  document.getElementById('price').innerHTML = original;
+				  
+			  }
+		}
+	
+		
+		
+</script>
+
+</div>
+</body>
+</html>

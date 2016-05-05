@@ -1,0 +1,105 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Profile</title>
+<link href="profile.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class = "content">
+<div class = "Banner">
+
+    <div class = "Logo">
+    <img id="myImage" src = "Capture.png" style = "width:180px;height: 100px; position:absolute;top:350px;left:360px;">
+    </div>
+	<audio id="audio" src="Cartoon_Bite_Sound_Effect.ogg" ></audio>
+    
+</div>
+
+
+<div class = "middle">
+
+<img id="myImage" src = "body1.png" style = "width:1555px;height: 1675px; position:absolute;top:80px;left:-310px;">
+
+<div style="width:600px;height:100px;border:0px solid #000; background-color: #808080;"></div>
+<a href = "faq.html"><button class="button" style = "width:100px;height:50px;top:370px;left:195px;position: absolute;background-color: #808080;font-size: 22px;padding:0px;" src="Grill.png" ><img src="help.png" height="55" style></button></a>
+<h1 style = "font-size: 18px;color:white;position:absolute; top:430px;left:235px;font-style: arial;"><u>Help</u></h1>
+
+<font face="Tahoma" size = "5" style = "left:260px;top:520px;position:absolute;" color = "grey">My Profile</font><br><br><br><br><br>
+
+<hr width="75%">
+
+<font face="Tahoma" size = "5" style = "left:260px;top:620px;position:absolute;" color = "grey">Username: <u>lDaisyl</u></font> <a href = "#"><img src = "Edit-48.png" style = "position:absolute; left:660px;top:600px;"></img></a>
+<font face="Tahoma" size = "5" style = "left:260px;top:680px;position:absolute;" color = "grey">Password: <u>********</u></font> <img src = "Edit-48.png" style = "position:absolute; left:660px;top:670px;"></img>
+<font face="Tahoma" size = "5" style = "left:260px;top:740px;position:absolute;" color = "grey">Name: Yang Yang</font>
+<font face="Tahoma" size = "5" style = "left:260px;top:800px;position:absolute;" color = "grey">Student ID: 1000000</font>
+<font face="Tahoma" size = "5" style = "left:260px;top:860px;position:absolute;" color = "grey">Email: yy@ursinus.edu</font>
+<font face="Tahoma" size = "5" style = "left:260px;top:920px;position:absolute;" color = "grey">Meal Credits: 21</font>
+<font face="Tahoma" size = "5" style = "left:260px;top:980px;position:absolute;" color = "grey">Dining Dollars: $50 </font>
+<font face="Tahoma" size = "5" style = "left:260px;top:1040px;position:absolute;" color = "grey">Bear Bucks: $10</font>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr width="75%">
+<br><br><br><br><br>
+<a href = "LoginPage.html"><img src = "lol.png" style = "position:absolute; left:660px;" height="48" width="48"></img></a><br><br><br>
+<font face="Tahoma" size = "5" style = "left:645px;position:absolute;" color = "grey" >Log out</font>
+
+
+
+
+
+<div style="position:relative;top:85px;left:10px;width:587px;height:100px;border:0px solid #000; background-color: #808080;"></div>
+<a href = "profile.html"><button class="button" style = "width:100px;height:50px;top:1380px;left:185px;position: absolute;background-color: #808080;font-size: 22px;padding:0px;" src="Grill.png" ><img src="account.png" height="55" style></button></a>
+<h1 style = "font-size: 18px;color:#FFFFFF;position:absolute; top:1450px;left:205px;font-style: arial;"><u>Account</u></h1>
+<a href = "lists.html"><button class="button" style = "width:100px;height:50px;top:1380px;left:330px;position: absolute;background-color: #808080;font-size: 22px;padding:0px;" src="Grill.png" ><img src="list.png" height="55" style></button></a>
+<h1 style = "font-size: 18px;color:#FFFFFF;position:absolute; top:1450px;left:370px;font-style: arial;"><u>List</u></h1>
+
+<a href = "HomePage1.html"><button class="button" style = "width:100px;height:50px;top:1380px;left:485px;position: absolute;background-color: #808080;font-size: 22px;padding:0px;" src="Grill.png" ><img src="home.png" height="55" style></button></a>
+<h1 style = "font-size: 18px;color:#FFFFFF;position:absolute; top:1450px;left:518px;font-style: arial;"><u>Home</u></h1>
+<a href = "cart.html"><button class="button" style = "width:100px;height:50px;top:1380px;left:655px;position: absolute;background-color: #808080;font-size: 22px;padding:0px;" src="Grill.png" ><img src="cart.png" height="55" style></button></a>
+<h1 style = "font-size: 18px;color:#FFFFFF;position:absolute; top:1450px;left:695px;font-style: arial;"><u>Cart</u></h1>
+
+
+</div>
+
+
+<script>
+	var image = document.getElementById('myImage');
+	var sound = document.getElementById('audio');
+	var temp = document.getElementsByClassName("loginform");
+	var temp1 = document.getElementsByClassName("signup");	
+	
+
+		function changeImage() {
+			image.src = "a1.png";
+			sound.play();
+			setTimeout(stopSound, 1000);
+			setTimeout(replace, 2000);
+			
+		}
+		
+		function stopSound() {
+			sound.src = "";
+		}
+		
+		function replace() {
+			image.src = "a.png";
+			sound.src = "Cartoon_Bite_Sound_Effect.ogg";
+		}
+		
+		function function1(){
+			temp.style.visibility = 'hidden';
+			temp1.style.visibility = 'visible';
+		}		
+</script>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+
+</div>
+</body>
+</html>

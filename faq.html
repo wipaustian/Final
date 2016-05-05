@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Help</title>
+<link href="Help.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body >
+<div class = "content">
+<div class = "Banner">
+<<div class ="Help"><a href ="faq.html"><img src="2.png"></a>
+    <span id = "help" style = "color:white;"><u>Help</u></span>
+    </div>
+    <div class = "Logo"><img id = "logo" src="capture.png"></div>
+    </div>
+    
+<div class = "middle">
+
+<select name = "navyOp" onchange="test(this);"  style = "width: 300px;"> 
+    <option selected = "selected">Select a question</option>
+    <option value = "1">How to order food with this app?</option>
+    <option value = "2">What is the meaning of lthe "list" button and what can I do with it?</option>
+    <option value = "3">Where can I click and where can I not click?</option>
+</select>
+
+<div class = "faqcontent">
+<div class = "faq1" id = "1" style = "visibility:hidden;position:absolute;top:400px;">-  You click each section, when you see things that you want, add it to your cart, after you picked everything, click your cart to pay and then you can view your paid order in the second right button on the bottom.</div>
+    <div class = "faq2" id = "2" style = "visibility:hidden; position:absolute;top:400px;">-  You can make list for yourself, it is like your personal <br>favorite.</div>
+    <div class = "faq3"  id = "3" style = "visibility:hidden; position:absolute;top:400px;">-  All the things with dark gray background/icons/texts. </div>
+</div>
+
+</div>
+
+<div class = "bottom">
+<ul>
+	<li><a href ="profile.html"><img src="account.png" width ="40" height="40"><span style = "left:467px;top:800px;position:absolute;"><u><b>Account</b></u></span></a></li>
+    <li><a href ="lists.html"><img src="list.png"width ="40" height="40"><span style = "left:562px;top:800px;position:absolute;"><b><u>List</u></b></span></a></li>
+    <li><a href ="HomePage1.html"><img src="home.png"width ="40" height="40"><span style = "left:642px;top:800px;position:absolute;"><b><u>Home</u></b></span></a></li>
+    <li><a href ="cart.html"><img src="cart.png"width ="40" height="40"><span style = "left:728px;top:800px;position:absolute;"><b><u>Cart</u></b></span></a></li>
+</ul>
+</div>
+
+
+<script>
+var image = document.getElementById('myImage');
+var sound = document.getElementById('audio');
+var temp = document.getElementsByClassName("loginform");
+var temp1 = document.getElementsByClassName("signup");
+
+
+ 
+
+function changeImage() {
+image.src = "http://i65.tinypic.com/2s198y8.png";
+sound.play();
+setTimeout(stopSound, 1000);
+}
+function stopSound() {
+sound.src = "";
+}
+function function1(){
+temp.style.visibility = 'hidden';
+temp1.style.visibility = 'visible';
+}
+
+window.test = function(e){
+    if(e.value=="1"){
+        document.getElementById('1').style.visibility='visible';
+        document.getElementById('2').style.visibility='hidden';
+        document.getElementById('3').style.visibility='hidden';
+    }
+    else if(e.value=="2"){
+        document.getElementById('1').style.visibility='hidden';
+        document.getElementById('2').style.visibility='visible';
+        document.getElementById('3').style.visibility='hidden';       
+    }
+    else if(e.value == "3"){
+        document.getElementById('1').style.visibility='hidden';
+        document.getElementById('2').style.visibility='hidden';
+        document.getElementById('3').style.visibility='visible';
+    }
+}
+ 
+</script>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+<script>
+function faq(){
+}
+</script>
+
+</div>
+</body>
+</html>
