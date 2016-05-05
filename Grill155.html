@@ -220,7 +220,7 @@
 <a href = "#"><img src = "add.png" id = "add" style = "width:50px;height:50px;top:600px;left:230px;position: absolute;font-size: 18px; padding:0px; visibility: hidden" onclick ="changeButton();"></button></a>
 <div id  = "add1" style = "width:100px;height:50px;top:650px;left:210px;position: absolute;font-size: 18px; padding:0px; visibility: hidden">Add to Cart</div>
 </section>
-<div id = "customize" style = "left:330px;top: 1050px;position: absolute;font-size: 18px; color: grey; padding:0px; visibility: hidden" >
+<div id = "customize" style = "left:330px;top: 1050px;position: absolute;font-size: 18px; color: black; padding:0px; visibility: hidden" >
  <input type="checkbox" name="vehicle" id="Burger Sauce"> Burger Sauce
  <input type="checkbox" name="vehicle" id="Tomato" > Tomato
  <input type="checkbox" name="vehicle" id="Lettuce" > Lettuce
@@ -228,20 +228,20 @@
  <input type="checkbox" name="vehicle" id="Bacon" > Bacon + $1.49
 </div>
 
-<div id = "customize1" style = "left:330px;top: 1050px;position: absolute;font-size: 18px; color: grey; padding:0px; visibility: hidden" >
+<div id = "customize1" style = "left:330px;top: 1050px;position: absolute;font-size: 18px; color: black; padding:0px; visibility: hidden" >
  <input type="checkbox" name="vehicle" id="Burger Sauce"> Hot Sauce 
  <input type="checkbox" name="vehicle" id="Burger Sauce"> Blue Cheese 
  <input type="checkbox" name="vehicle" id="Burger Sauce"> Other Sauce 
 
 </div>
 
-<div id = "customize2" style = "left:330px;top: 1050px;position: absolute;font-size: 18px; padding:0px; visibility: hidden">
- <input type="checkbox" name="vehicle" id="Small"> Small 
- <input type="checkbox" name="vehicle" id="Medium"> Medium
- <input type="checkbox" name="vehicle" id="Large"> Large
+<div id = "customize2" style = "left:330px;top: 1050px;position: absolute;font-size: 18px; padding:0px; visibility: hidden" onclick = "blur();">
+ <input type="checkbox" name="vehicle" id="Small" onclick = "blur();"> Small 
+ <input type="checkbox" name="vehicle" id="Medium" onclick = "blur();"> Medium
+ <input type="checkbox" name="vehicle" id="Large" onclick = "blur();"> Large
 
 </div>
- </div>
+</div>
 
  
 
@@ -374,30 +374,64 @@
 				alert("Choose a size");
 			
 			else{
-			if(add.src.match("add.png")){
-				add.src = "download.png";
-				add1.innerHTML = "Added to cart";
+				if(add.src.match("add.png")){
+					add.src = "download.png";
+					add1.innerHTML = "Added to cart";
+					}
+				else{
+					add.src = "add.png";
+					add1.innerHTML = "Add to cart";
 				}
-			else{
-				add.src = "add.png";
-				add1.innerHTML = "Add to cart";
-			}
 			}
 		}
 		
 		function calc(){
 			var bprice = 1.49;
 			var original = "$3.49"
-			  if (document.getElementById('Bacon').checked) 
-			  {
-				  document.getElementById('price').innerHTML = document.getElementById('price').innerHTML.replace('$','');
-				  var temp = parseFloat(document.getElementById('price').innerHTML);
-				  document.getElementById('price').innerHTML = '$'+(temp+bprice);
-			  } 
-			  else {
-				  document.getElementById('price').innerHTML = original;
+			    if (document.getElementById('Bacon').checked) {
+				    document.getElementById('price').innerHTML = document.getElementById('price').innerHTML.replace('$','');
+				    var temp = parseFloat(document.getElementById('price').innerHTML);
+				    document.getElementById('price').innerHTML = '$'+(temp+bprice);
+			    } 
+			    else {
+				    document.getElementById('price').innerHTML = original;
 				  
-			  }
+			    }
+		}
+		
+		function blur(){
+			if(document.getElementById('Small').checked==true){
+			
+				document.getElementById('Medium').disabled = true;
+				document.getElementById('Large').disabled = true;
+			}	
+			else if(document.getElementById('Medium').checked==true){
+		
+				document.getElementById('Small').disabled = true;
+				document.getElementById('Large').disabled = true;
+			}
+			else if(document.getElementById('Large').checked==true){
+		
+				document.getElementById('Medium').disabled = true;
+				document.getElementById('Small').disabled = true;
+			}
+			else if(document.getElementById('Small').checked==false){
+		
+				document.getElementById('Medium').disabled = false;
+				document.getElementById('Large').disabled = false;
+			}	
+			else if(document.getElementById('Medium').checked==false){
+		
+				document.getElementById('Small').disabled = false;
+				document.getElementById('Large').disabled = false;
+			}
+			else if(document.getElementById('Large').checked==false){
+	
+				document.getElementById('Medium').disabled = false;
+				document.getElementById('Small').disabled = false;
+			}
+		
+		
 		}
 	
 		
